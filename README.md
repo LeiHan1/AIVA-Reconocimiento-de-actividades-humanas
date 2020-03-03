@@ -15,4 +15,12 @@ Para cada tipo de movimiento se registra el número de personas que realiza esta
 
 Instalaciones previas
 ------------
+Para poder lanzar los scripts de python que se usarán en este proyecto, primero se instalará python3.X, desde una terminal de linux ejecutamos:
 
+>sudo apt install python3.7
+
+Ahora instalaremos las dependencias, usando el archivo requirements.txt, desde el terminal se deberá lanzar:
+
+>pip3 install -r requirements.txt
+
+Con esto ya estará hecho todo el set up.
