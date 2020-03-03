@@ -25,11 +25,5 @@ Ahora instalaremos las dependencias, usando el archivo requirements.txt, desde e
 
 Con esto ya estará hecho todo el set up.
 
-Ejecucióń del test
-------------
-Para ejecutar el test desde el terminal lanzar
-
->python3 test_aiva.py
-
 
 
