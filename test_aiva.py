@@ -12,7 +12,7 @@ class Test_aiva(unittest.TestCase):
 
     def test_read_video(self):
         import cv2
-        cap = cv2.VideoCapture("/home/pixelabs/Vídeos/ShopAssistant2front.mpg")
+        cap = cv2.VideoCapture("Vídeos/ShopAssistant2front.mpg")
 
         self.assertTrue(cap.isOpened())
 
