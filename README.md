@@ -25,5 +25,9 @@ Ahora instalaremos las dependencias, usando el archivo requirements.txt, desde e
 
 Con esto ya estará hecho todo el set up.
 
+Lanzar script
+------------
+>python3 People_Detector_v1.py
+
 
 
