@@ -4,20 +4,14 @@ import cv2
 import csv
 
 
-# initialize the HOG descriptor/person detector
-hog = cv2.HOGDescriptor()
-hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
-video_path = "OneLeaveShop1front.mpg"
-pedestrian_cascade = cv2.CascadeClassifier("haarcascade_fullbody.xml")
-vs = cv2.VideoCapture(video_path)
-id = 0
 
+#Verifica que la nueva persona detectada nno está ya en el sistema
 def check_if_in(pedestrians, ped):
     for pedestrian in pedestrians:
         if np.abs(ped[0] - pedestrian[0]) + np.abs(ped[1] - pedestrian[1]) < 150:
             return False
     return True
-
+#Analiza las trayectorias de las personas detectadas y genera el csv de salida
 def analisis_trayectorias(trayectorias):
     id = 0
     with open('person_detector.csv', 'w', newline='') as csvfile:
@@ -92,7 +86,19 @@ def analisis_trayectorias(trayectorias):
                             spamwriter.writerow([id, "00:00", "00:10", "central", "sale"])
 
             id += 1
+
+            
+            
+# initialize the HOG descriptor/person detector
+hog = cv2.HOGDescriptor()
+hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
+video_path = "OneLeaveShop1front.mpg"
+pedestrian_cascade = cv2.CascadeClassifier("haarcascade_fullbody.xml")
 trackers = cv2.MultiTracker_create()
+
+vs = cv2.VideoCapture(video_path)
+
+id = 0
 all_pedestrians = []
 trayectorias = []
 
