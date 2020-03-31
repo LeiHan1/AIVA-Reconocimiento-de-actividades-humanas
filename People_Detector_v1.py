@@ -91,7 +91,7 @@ def analisis_trayectorias(trayectorias):
 # initialize the HOG descriptor/person detector
 hog = cv2.HOGDescriptor()
 hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
-video_path = "OneLeaveShop1front.mpg"
+video_path = "Videos/OneLeaveShop1front.mpg"
 pedestrian_cascade = cv2.CascadeClassifier("haarcascade_fullbody.xml")
 trackers = cv2.MultiTracker_create()
 
