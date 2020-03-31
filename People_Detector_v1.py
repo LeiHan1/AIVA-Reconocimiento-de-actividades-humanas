@@ -100,7 +100,7 @@ vs = cv2.VideoCapture(video_path)
 id = 0
 all_pedestrians = []
 trayectorias = []
-
+font = cv2.FONT_HERSHEY_DUPLEX
 while True:
     # reads frames from a video
     ret, frames = vs.read()
@@ -120,11 +120,7 @@ while True:
         if check_if_in(all_pedestrians, r):
             all_pedestrians.append(r)
             trackers.add(cv2.TrackerCSRT_create(), frames, r)
-            cv2.rectangle(img_color,(x,y),(x+w,y+h),(0,255,0),2)
-            font = cv2.FONT_HERSHEY_DUPLEX
-            cv2.putText(img_color, 'Person', (x + 6, y - 6), font, 0.5, (0,
-            255, 0), 1)
-            # Display frames in a window
+
     (success, cajas) = trackers.update(frames)
     cnt = 0
     if success and len(cajas) > 0:
