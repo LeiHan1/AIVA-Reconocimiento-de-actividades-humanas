@@ -27,6 +27,7 @@ Con esto ya estará hecho todo el set up.
 
 Lanzar script
 ------------
+Para lanzar el script de demo desde el terminal lanzar la siguiente instrucción
 >python3 People_Detector_v1.py
 
 
