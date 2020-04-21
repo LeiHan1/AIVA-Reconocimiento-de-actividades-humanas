@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 import csv
-
+import argparse
 
 class Person:
     """Clase persona, utilizada para identificar a cada individuo que aparece en el campo de visión"""
@@ -146,10 +146,17 @@ class DetectSystem:
 
         self.__save_results()
 
-
-def main():
+def main(video_path):
     a = DetectSystem()
-    a.run("Videos/OneLeaveShop1front.mpg")
+    a.run(video_path)
+
+
+if __name__ == "__main__":
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--video", required=True, help="Path of the video.")
+    args = vars(ap.parse_args())
+    video_path = args["video"]
+    main(video_path)
 
 
 main()
