@@ -28,7 +28,24 @@ Con esto ya estará hecho todo el set up.
 Lanzar script
 ------------
 Para lanzar el script de demo desde el terminal lanzar la siguiente instrucción
->python3 People_Detector_v1.py
+>python3 People_Detector_v1.py --video /path/to/video.avi
+
+Donde /path/to/video.avi está sustituida por la ruta concreta del video.
 
 
+Instalar el sistema dockerizado (demo)
+------------
+1. Para la instalación previa de Docker ver la [documentación de Docker](https://docs.docker.com/engine/install/).
 
+2. El archivo imagen de Docker está actualizado en la página de [Docker Hub](https://hub.docker.com/r/lhanurjc/people_detector). Está creado bajo el sistema de Ubuntu.
+
+Para instalar la imagen se ejecuta:
+>docker pull lhanurjc/people_detector:latest
+
+3. Una vez instalado la imagen, ejecutar para instanciar y ejecutar el contenedor.
+>docker run lhanurjc/people_detector:latest
+
+La imagen demo contiene un video como argumento por defecto. Se puede ejecutar directamente.
+
+4. La ruta de almacenamiento de Docker está localizado en:
+>/var/lib/docker/overlay2/id_contenedor/diff/person_detector.csv
