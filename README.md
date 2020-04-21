@@ -42,6 +42,7 @@ Instalar el sistema dockerizado
 
  - Para instalar la imagen se ejecuta:
 >docker pull lhanurjc/people_detector:latest
+
 La imagen del Docker Hub es una demo que contiene a un video como argumento por defecto. Se puede ejecutar directamente.
 
  - Para crear la imagen desde local utilizando el Dockerfile, se ejecuta en el directorio raíz de este proyecto:
